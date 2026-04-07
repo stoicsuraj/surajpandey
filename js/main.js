@@ -161,7 +161,7 @@ const app = {
     const content = document.getElementById('home-content');
     if (!content) return;
     
-    let html = '<h1>Welcome</h1><p>Explore my collection of poems and writings.</p><h2>Recent Posts</h2><div class="posts-grid">';
+    let html = '<h1><i>swagat cha</i></h1><p>few of the stuffs i wrote</p><div class="posts-grid">';
     
     this.posts.forEach(post => {
       html += `
@@ -181,7 +181,7 @@ const app = {
     const content = document.getElementById('posts-content');
     if (!content) return;
     
-    let html = '<h1>Posts</h1><div class="posts-list">';
+    let html = '<h1>stuffs i penned</h1><div class="posts-list">';
     
     this.posts.forEach(post => {
       html += `
