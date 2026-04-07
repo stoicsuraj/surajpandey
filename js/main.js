@@ -1,4 +1,3 @@
-// Blog App - Minimal & Clean
 const app = {
   posts: [],
   currentTheme: 'light',
@@ -110,7 +109,6 @@ const app = {
   },
 
   bindEvents() {
-    // Navigation
     document.querySelectorAll('nav a').forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -118,8 +116,6 @@ const app = {
         window.scrollTo(0, 0);
       });
     });
-
-    // Post links
     document.addEventListener('click', (e) => {
       const postLink = e.target.closest('[data-post-id]');
       if (postLink) {
@@ -128,8 +124,6 @@ const app = {
         window.scrollTo(0, 0);
       }
     });
-
-    // Back button
     document.addEventListener('click', (e) => {
       if (e.target.classList.contains('back-button')) {
         e.preventDefault();
@@ -140,18 +134,14 @@ const app = {
   },
 
   showSection(name) {
-    // Hide all
     document.querySelectorAll('main > section').forEach(s => s.classList.remove('active'));
     document.querySelectorAll('.post-detail').forEach(d => d.classList.remove('active'));
     document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
-
-    // Show selected
     const section = document.getElementById(name);
     if (section) {
       section.classList.add('active');
       document.querySelector(`nav a[data-section="${name}"]`)?.classList.add('active');
       
-      // Render content
       if (name === 'home') this.renderHome();
       else if (name === 'posts') this.renderPosts();
     }
@@ -201,12 +191,10 @@ const app = {
     const post = this.posts.find(p => p.id === postId);
     if (!post) return;
 
-    // Hide everything
     document.querySelectorAll('main > section').forEach(s => s.classList.remove('active'));
     document.querySelectorAll('.post-detail').forEach(d => d.classList.remove('active'));
     document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
 
-    // Load and render
     try {
       const response = await fetch(`./posts/${post.filename}`);
       const html = await response.text();
