@@ -2,25 +2,25 @@
   "currentlyReading": [
     {
       "id": "paper-1",
-      "title": "On Consciousness and Subjective Experience",
-      "authors": "John Smith et al",
-      "dateAdded": "Apr 3, 2026"
+      "title": "The Economist as Engineer: Game Theory, Experimentation, and Computation in Economics",
+      "authors": "Alvin E. Roth",
+      "dateAdded": "April 2026"
     }
   ],
-  "alreadyRead": [
+  "fascinating": [
     {
       "id": "paper-2",
-      "title": "The Nature of Knowledge",
-      "authors": "Jane Doe et al",
-      "whatLearned": "Gained insights into epistemological frameworks and their modern applications.",
-      "dateRead": "Mar 10, 2026"
+      "title": "Platform Competition in Two-Sided Markets",
+      "authors": "Jane Doe and Robert Johnson",
+      "whatLearned": "platform competition in two-sided markets is a complex and dynamic process that involves multiple factors, including network effects, pricing strategies, and user behavior.",
+      "dateRead": "March 2026"
     },
     {
       "id": "paper-3",
-      "title": "Phenomenology in Contemporary Philosophy",
-      "authors": "Michael Brown et al",
-      "whatLearned": "Understood the interconnection between perception and reality.",
-      "dateRead": "Feb 15, 2026"
+      "title": "The Market for Lemons",
+      "authors": "George Akerlof",
+      "whatLearned": "information assymetry can lead to market failure, as buyers may be unwilling to pay a fair price for a product if they cannot accurately assess its quality.",
+      "dateRead": "February 2026"
     }
   ]
 }

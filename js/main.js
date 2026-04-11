@@ -40,6 +40,14 @@ const app = {
   loadPosts() {
     this.posts = [
       {
+        id: 'who-am-i',
+        title: 'who am i?',
+        date: 'Apr 11, 2026',
+        dateObj: new Date('Apr 11, 2026'),
+        snippet: 'a meditation on identity, self-discovery, and the journey of becoming.',
+        filename: 'who-am-i.html'
+      },
+      {
         id: 'revered-stranger',
         title: 'revered stranger',
         date: 'Apr 5, 2026',
