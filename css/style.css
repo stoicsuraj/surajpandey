@@ -603,7 +603,10 @@ footer a:hover {
 
 .book-card,
 .paper-card {
-  /* ...existing styles... */
+  background: transparent;
+  padding: 1.5rem;
+  border: 1px dashed #999;
+  border-radius: 4px;
 }
 
 .book-date,
