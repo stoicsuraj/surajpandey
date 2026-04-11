@@ -136,7 +136,7 @@ const app = {
       this.books = await response.json();
     } catch (error) {
       console.error('Error loading books:', error);
-      this.books = { currentlyReading: [], alreadyRead: [] };
+      this.books = { currentlyReading: [], favorites: [] };
     }
   },
 
@@ -146,7 +146,7 @@ const app = {
       this.papers = await response.json();
     } catch (error) {
       console.error('Error loading papers:', error);
-      this.papers = { currentlyReading: [], alreadyRead: [] };
+      this.papers = { currentlyReading: [], fascinating: [] };
     }
   },
 
@@ -217,7 +217,7 @@ const app = {
     
     html += '</div>';
 
-    // Add currently reading books section
+    
     if (this.books && this.books.currentlyReading.length > 0) {
       html += '<h2 class="section-subtitle">currently reading</h2>';
       html += '<div class="books-papers-container"><div class="books-section">';
@@ -235,7 +235,7 @@ const app = {
       html += '</div></div>';
     }
 
-    // Add currently reading papers section
+   
     if (this.papers && this.papers.currentlyReading.length > 0) {
       if (!this.books || this.books.currentlyReading.length === 0) {
         html += '<h2 class="section-subtitle">currently reading</h2>';
@@ -335,9 +335,9 @@ const app = {
       html += '</div>';
     }
 
-    if (this.books.alreadyRead && this.books.alreadyRead.length > 0) {
-      html += '<h2 class="books-section-title">already read</h2><div class="books-list">';
-      this.books.alreadyRead.forEach(book => {
+    if (this.books.favorites && this.books.favorites.length > 0) {
+      html += '<h2 class="books-section-title">favorites</h2><div class="books-list">';
+      this.books.favorites.forEach(book => {
         html += `
           <div class="book-card">
             <h3 class="book-title">${book.title}</h3>
@@ -371,9 +371,9 @@ const app = {
       html += '</div>';
     }
 
-    if (this.papers.alreadyRead && this.papers.alreadyRead.length > 0) {
-      html += '<h2 class="papers-section-title">already read</h2><div class="papers-list">';
-      this.papers.alreadyRead.forEach(paper => {
+    if (this.papers.fascinating && this.papers.fascinating.length > 0) {
+      html += '<h2 class="papers-section-title">fascinating</h2><div class="papers-list">';
+      this.papers.fascinating.forEach(paper => {
         html += `
           <div class="paper-card">
             <h3 class="paper-title">${paper.title}</h3>
